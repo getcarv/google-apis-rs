@@ -13,7 +13,7 @@ documentation = "https://docs.rs/google-cloudtasks2_beta3/5.0.4+20240223"
 license = "MIT"
 keywords = ["cloudtasks", "google", "protocol", "web", "api"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 
 [dependencies]

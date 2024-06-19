@@ -13,7 +13,7 @@ documentation = "https://docs.rs/google-clouddebugger2/5.0.4+20230113"
 license = "MIT"
 keywords = ["clouddebugger", "google", "protocol", "web", "api"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 
 [dependencies]

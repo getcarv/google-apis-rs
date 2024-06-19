@@ -13,7 +13,7 @@ documentation = "https://docs.rs/google-pagespeedonline5/5.0.4+20240229"
 license = "MIT"
 keywords = ["pagespeedonline", "google", "protocol", "web", "api"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 
 [dependencies]

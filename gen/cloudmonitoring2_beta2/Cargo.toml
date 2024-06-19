@@ -13,7 +13,7 @@ documentation = "https://docs.rs/google-cloudmonitoring2_beta2/5.0.4+20170501"
 license = "MIT"
 keywords = ["cloudmonitoring", "google", "protocol", "web", "api"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 
 [dependencies]

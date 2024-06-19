@@ -13,7 +13,7 @@ documentation = "https://docs.rs/google-firebasehosting1_beta1/5.0.4+20240303"
 license = "MIT"
 keywords = ["firebasehosting", "google", "protocol", "web", "api"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 
 [dependencies]

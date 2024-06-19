@@ -13,7 +13,7 @@ documentation = "http://byron.github.io/google-apis-rs/google_adsensehost4d1_cli
 license = "MIT"
 keywords = ["adsensehost", "google", "cli"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 [[bin]]
 name = "adsensehost4d1"

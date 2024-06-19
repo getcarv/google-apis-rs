@@ -13,7 +13,7 @@ documentation = "http://byron.github.io/google-apis-rs/google_factchecktools1_al
 license = "MIT"
 keywords = ["factchecktools", "google", "cli"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 [[bin]]
 name = "factchecktools1-alpha1"

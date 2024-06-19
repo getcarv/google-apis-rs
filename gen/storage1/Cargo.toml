@@ -13,7 +13,7 @@ documentation = "https://docs.rs/google-storage1/5.0.4+20240229"
 license = "MIT"
 keywords = ["storage", "google", "protocol", "web", "api"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 
 [dependencies]

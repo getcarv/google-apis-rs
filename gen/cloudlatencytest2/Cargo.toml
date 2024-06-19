@@ -12,7 +12,7 @@ documentation = "https://docs.rs/google-cloudlatencytest2/5.0.4+20160309"
 license = "MIT"
 keywords = ["cloudlatencytest", "google", "protocol", "web", "api"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 
 [dependencies]

@@ -13,7 +13,7 @@ documentation = "http://byron.github.io/google-apis-rs/google_chromepolicy1_cli"
 license = "MIT"
 keywords = ["chromepolicy", "google", "cli"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 [[bin]]
 name = "chromepolicy1"

@@ -13,7 +13,7 @@ documentation = "https://docs.rs/google-firebasedatabase1_beta/5.0.4+20240303"
 license = "MIT"
 keywords = ["firebasedatabase", "google", "protocol", "web", "api"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 
 [dependencies]

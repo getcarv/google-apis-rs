@@ -13,7 +13,7 @@ documentation = "https://docs.rs/google-dialogflow2/5.0.4+20240227"
 license = "MIT"
 keywords = ["dialogflow", "google", "protocol", "web", "api"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 
 [dependencies]

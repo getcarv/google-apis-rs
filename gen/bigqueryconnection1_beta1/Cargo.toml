@@ -13,7 +13,7 @@ documentation = "https://docs.rs/google-bigqueryconnection1_beta1/5.0.4+20240214
 license = "MIT"
 keywords = ["bigqueryconnection", "google", "protocol", "web", "api"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 
 [dependencies]

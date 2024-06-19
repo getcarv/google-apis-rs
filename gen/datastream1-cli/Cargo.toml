@@ -13,7 +13,7 @@ documentation = "http://byron.github.io/google-apis-rs/google_datastream1_cli"
 license = "MIT"
 keywords = ["datastream", "google", "cli"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 [[bin]]
 name = "datastream1"

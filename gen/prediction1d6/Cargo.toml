@@ -13,7 +13,7 @@ documentation = "https://docs.rs/google-prediction1d6/5.0.4+20160511"
 license = "MIT"
 keywords = ["prediction", "google", "protocol", "web", "api"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 
 [dependencies]

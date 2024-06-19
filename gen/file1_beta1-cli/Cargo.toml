@@ -13,7 +13,7 @@ documentation = "http://byron.github.io/google-apis-rs/google_file1_beta1_cli"
 license = "MIT"
 keywords = ["file", "google", "cli"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 [[bin]]
 name = "file1-beta1"

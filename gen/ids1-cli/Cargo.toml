@@ -13,7 +13,7 @@ documentation = "http://byron.github.io/google-apis-rs/google_ids1_cli"
 license = "MIT"
 keywords = ["ids", "google", "cli"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 [[bin]]
 name = "ids1"

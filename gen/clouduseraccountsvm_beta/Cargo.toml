@@ -13,7 +13,7 @@ documentation = "https://docs.rs/google-clouduseraccountsvm_beta/5.0.4+20160316"
 license = "MIT"
 keywords = ["clouduseraccounts", "google", "protocol", "web", "api"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 
 [dependencies]

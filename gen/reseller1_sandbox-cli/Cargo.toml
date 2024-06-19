@@ -13,7 +13,7 @@ documentation = "http://byron.github.io/google-apis-rs/google_reseller1_sandbox_
 license = "MIT"
 keywords = ["reseller", "google", "cli"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 [[bin]]
 name = "reseller1-sandbox"

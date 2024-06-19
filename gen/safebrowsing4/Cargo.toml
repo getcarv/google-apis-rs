@@ -13,7 +13,7 @@ documentation = "https://docs.rs/google-safebrowsing4/5.0.4+20240225"
 license = "MIT"
 keywords = ["safebrowsing", "google", "protocol", "web", "api"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 
 [dependencies]

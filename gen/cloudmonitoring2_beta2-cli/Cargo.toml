@@ -13,7 +13,7 @@ documentation = "http://byron.github.io/google-apis-rs/google_cloudmonitoring2_b
 license = "MIT"
 keywords = ["cloudmonitoring", "google", "cli"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 [[bin]]
 name = "cloudmonitoring2-beta2"

@@ -13,7 +13,7 @@ documentation = "https://docs.rs/google-appengine1_beta4/5.0.4+20181005"
 license = "MIT"
 keywords = ["appengine", "google", "protocol", "web", "api"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 
 [dependencies]

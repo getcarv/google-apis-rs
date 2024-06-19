@@ -13,7 +13,7 @@ documentation = "https://docs.rs/google-contactcenterinsights1/5.0.4+20240226"
 license = "MIT"
 keywords = ["contactcenterinsight", "google", "protocol", "web", "api"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 
 [dependencies]

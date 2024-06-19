@@ -13,7 +13,7 @@ documentation = "http://byron.github.io/google-apis-rs/google_people1_cli"
 license = "MIT"
 keywords = ["people", "google", "cli"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 [[bin]]
 name = "people1"

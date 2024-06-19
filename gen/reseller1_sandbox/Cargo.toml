@@ -13,7 +13,7 @@ documentation = "https://docs.rs/google-reseller1_sandbox/5.0.4+20160329"
 license = "MIT"
 keywords = ["reseller", "google", "protocol", "web", "api"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 
 [dependencies]

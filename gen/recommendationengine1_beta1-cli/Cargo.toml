@@ -13,7 +13,7 @@ documentation = "http://byron.github.io/google-apis-rs/google_recommendationengi
 license = "MIT"
 keywords = ["recommendationengine", "google", "cli"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 [[bin]]
 name = "recommendationengine1-beta1"

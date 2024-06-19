@@ -13,7 +13,7 @@ documentation = "https://docs.rs/google-manager1_beta2/5.0.4+20140915"
 license = "MIT"
 keywords = ["manager", "google", "protocol", "web", "api"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 
 [dependencies]

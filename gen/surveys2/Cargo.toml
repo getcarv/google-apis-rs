@@ -12,7 +12,7 @@ documentation = "https://docs.rs/google-surveys2/5.0.4+20180508"
 license = "MIT"
 keywords = ["surveys", "google", "protocol", "web", "api"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 
 [dependencies]

@@ -13,7 +13,7 @@ documentation = "http://byron.github.io/google-apis-rs/google_games1_cli"
 license = "MIT"
 keywords = ["games", "google", "cli"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 [[bin]]
 name = "games1"

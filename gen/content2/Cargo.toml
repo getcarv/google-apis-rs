@@ -13,7 +13,7 @@ documentation = "https://docs.rs/google-content2/5.0.4+20220303"
 license = "MIT"
 keywords = ["content", "google", "protocol", "web", "api"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 
 [dependencies]

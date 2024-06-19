@@ -13,7 +13,7 @@ documentation = "https://docs.rs/google-appsactivity1/5.0.4+20200628"
 license = "MIT"
 keywords = ["appsactivity", "google", "protocol", "web", "api"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 
 [dependencies]

@@ -13,7 +13,7 @@ documentation = "https://docs.rs/google-file1/5.0.4+20240126"
 license = "MIT"
 keywords = ["file", "google", "protocol", "web", "api"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 
 [dependencies]

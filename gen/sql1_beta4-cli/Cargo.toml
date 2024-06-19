@@ -13,7 +13,7 @@ documentation = "http://byron.github.io/google-apis-rs/google_sql1_beta4_cli"
 license = "MIT"
 keywords = ["sql", "google", "cli"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 [[bin]]
 name = "sql1-beta4"

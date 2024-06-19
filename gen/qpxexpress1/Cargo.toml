@@ -13,7 +13,7 @@ documentation = "https://docs.rs/google-qpxexpress1/5.0.4+20160708"
 license = "MIT"
 keywords = ["qpxExpress", "google", "protocol", "web", "api"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 
 [dependencies]

@@ -13,7 +13,7 @@ documentation = "https://docs.rs/google-taskqueue1_beta2/5.0.4+20160428"
 license = "MIT"
 keywords = ["taskqueue", "google", "protocol", "web", "api"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 
 [dependencies]

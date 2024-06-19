@@ -13,7 +13,7 @@ documentation = "https://docs.rs/google-authorizedbuyersmarketplace1/5.0.4+20240
 license = "MIT"
 keywords = ["authorizedbuyersmark", "google", "protocol", "web", "api"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 
 [dependencies]

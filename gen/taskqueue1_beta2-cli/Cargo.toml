@@ -13,7 +13,7 @@ documentation = "http://byron.github.io/google-apis-rs/google_taskqueue1_beta2_c
 license = "MIT"
 keywords = ["taskqueue", "google", "cli"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 [[bin]]
 name = "taskqueue1-beta2"

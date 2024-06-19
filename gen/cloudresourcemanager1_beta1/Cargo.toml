@@ -13,7 +13,7 @@ documentation = "https://docs.rs/google-cloudresourcemanager1_beta1/5.0.4+202403
 license = "MIT"
 keywords = ["cloudresourcemanager", "google", "protocol", "web", "api"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 
 [dependencies]

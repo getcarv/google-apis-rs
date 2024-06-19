@@ -13,7 +13,7 @@ documentation = "https://docs.rs/google-gan1_beta1/5.0.4+20130205"
 license = "MIT"
 keywords = ["gan", "google", "protocol", "web", "api"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 
 [dependencies]

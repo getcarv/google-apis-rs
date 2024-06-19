@@ -13,7 +13,7 @@ documentation = "http://byron.github.io/google-apis-rs/google_fusiontables2_cli"
 license = "MIT"
 keywords = ["fusiontables", "google", "cli"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 [[bin]]
 name = "fusiontables2"

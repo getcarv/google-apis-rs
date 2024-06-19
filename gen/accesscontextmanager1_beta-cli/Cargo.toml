@@ -13,7 +13,7 @@ documentation = "http://byron.github.io/google-apis-rs/google_accesscontextmanag
 license = "MIT"
 keywords = ["accesscontextmanager", "google", "cli"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 [[bin]]
 name = "accesscontextmanager1-beta"

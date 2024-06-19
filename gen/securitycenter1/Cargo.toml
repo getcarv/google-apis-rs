@@ -13,7 +13,7 @@ documentation = "https://docs.rs/google-securitycenter1/5.0.4+20240302"
 license = "MIT"
 keywords = ["securitycenter", "google", "protocol", "web", "api"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 
 [dependencies]

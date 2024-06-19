@@ -13,7 +13,7 @@ documentation = "http://byron.github.io/google-apis-rs/google_chromemanagement1_
 license = "MIT"
 keywords = ["chromemanagement", "google", "cli"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 [[bin]]
 name = "chromemanagement1"

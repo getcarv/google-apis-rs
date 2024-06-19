@@ -13,7 +13,7 @@ documentation = "https://docs.rs/google-dfareporting3d5/5.0.4+20240201"
 license = "MIT"
 keywords = ["dfareporting", "google", "protocol", "web", "api"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 
 [dependencies]

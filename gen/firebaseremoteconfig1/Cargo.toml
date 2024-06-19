@@ -13,7 +13,7 @@ documentation = "https://docs.rs/google-firebaseremoteconfig1/5.0.4+20171129"
 license = "MIT"
 keywords = ["firebaseremoteconfig", "google", "protocol", "web", "api"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 
 [dependencies]

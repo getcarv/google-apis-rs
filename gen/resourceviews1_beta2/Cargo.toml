@@ -13,7 +13,7 @@ documentation = "https://docs.rs/google-resourceviews1_beta2/5.0.4+20160512"
 license = "MIT"
 keywords = ["resourceviews", "google", "protocol", "web", "api"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 
 [dependencies]

@@ -13,7 +13,7 @@ documentation = "https://docs.rs/google-paymentsresellersubscription1/5.0.4+2024
 license = "MIT"
 keywords = ["paymentsresellersubs", "google", "protocol", "web", "api"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 
 [dependencies]

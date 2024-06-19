@@ -13,7 +13,7 @@ documentation = "http://byron.github.io/google-apis-rs/google_cloudresourcemanag
 license = "MIT"
 keywords = ["cloudresourcemanager", "google", "cli"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 [[bin]]
 name = "cloudresourcemanager1-beta1"

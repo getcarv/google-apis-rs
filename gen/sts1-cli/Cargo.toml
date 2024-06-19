@@ -13,7 +13,7 @@ documentation = "http://byron.github.io/google-apis-rs/google_sts1_cli"
 license = "MIT"
 keywords = ["sts", "google", "cli"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 [[bin]]
 name = "sts1"

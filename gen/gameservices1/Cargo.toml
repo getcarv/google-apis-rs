@@ -13,7 +13,7 @@ documentation = "https://docs.rs/google-gameservices1/5.0.4+20230105"
 license = "MIT"
 keywords = ["gameservices", "google", "protocol", "web", "api"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 
 [dependencies]

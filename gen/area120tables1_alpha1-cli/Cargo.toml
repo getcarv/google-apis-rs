@@ -13,7 +13,7 @@ documentation = "http://byron.github.io/google-apis-rs/google_area120tables1_alp
 license = "MIT"
 keywords = ["area120tables", "google", "cli"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 [[bin]]
 name = "area120tables1-alpha1"

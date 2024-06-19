@@ -13,7 +13,7 @@ documentation = "http://byron.github.io/google-apis-rs/google_ideahub1_beta_cli"
 license = "MIT"
 keywords = ["ideahub", "google", "cli"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 [[bin]]
 name = "ideahub1-beta"

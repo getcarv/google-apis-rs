@@ -13,7 +13,7 @@ documentation = "http://byron.github.io/google-apis-rs/google_bigqueryconnection
 license = "MIT"
 keywords = ["bigqueryconnection", "google", "cli"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 [[bin]]
 name = "bigqueryconnection1-beta1"

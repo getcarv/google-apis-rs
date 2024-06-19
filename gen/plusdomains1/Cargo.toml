@@ -13,7 +13,7 @@ documentation = "https://docs.rs/google-plusdomains1/5.0.4+20190616"
 license = "MIT"
 keywords = ["plusDomains", "google", "protocol", "web", "api"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 
 [dependencies]

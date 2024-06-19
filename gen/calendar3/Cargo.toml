@@ -13,7 +13,7 @@ documentation = "https://docs.rs/google-calendar3/5.0.5+20240328"
 license = "MIT"
 keywords = ["calendar", "google", "protocol", "web", "api"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 
 [dependencies]

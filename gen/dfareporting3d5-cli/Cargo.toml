@@ -13,7 +13,7 @@ documentation = "http://byron.github.io/google-apis-rs/google_dfareporting3d5_cl
 license = "MIT"
 keywords = ["dfareporting", "google", "cli"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 [[bin]]
 name = "dfareporting3d5"

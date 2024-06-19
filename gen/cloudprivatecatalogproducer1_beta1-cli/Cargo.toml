@@ -13,7 +13,7 @@ documentation = "http://byron.github.io/google-apis-rs/google_cloudprivatecatalo
 license = "MIT"
 keywords = ["cloudprivatecatalogp", "google", "cli"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 [[bin]]
 name = "cloudprivatecatalogproducer1-beta1"

@@ -12,7 +12,7 @@ documentation = "https://docs.rs/google-consumersurveys2/5.0.4+20170407"
 license = "MIT"
 keywords = ["consumersurveys", "google", "protocol", "web", "api"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 
 [dependencies]

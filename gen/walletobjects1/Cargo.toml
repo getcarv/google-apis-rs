@@ -13,7 +13,7 @@ documentation = "https://docs.rs/google-walletobjects1/5.0.4+20240304"
 license = "MIT"
 keywords = ["walletobjects", "google", "protocol", "web", "api"]
 autobins = false
-edition = "2018"
+edition = "2021"
 
 
 [dependencies]
