@@ -307,7 +307,7 @@ impl FieldCursor {
                     }
                     ComplexType::Vec => match *assure_entry(mapping, field) {
                         Value::Array(ref mut values) => {
-                            values.push(to_jval(value, type_info.jtype, err))
+                            values.push(to_jval(value, type_info.jtype, err));
                         }
                         _ => unreachable!(),
                     },
@@ -344,7 +344,7 @@ pub fn parse_kv_arg<'a>(
 ) -> (&'a str, Option<&'a str>) {
     let mut add_err = || {
         err.issues
-            .push(CLIError::InvalidKeyValueSyntax(kv.to_string(), for_hashmap))
+            .push(CLIError::InvalidKeyValueSyntax(kv.to_string(), for_hashmap));
     };
     match kv.find('=') {
         None => {
@@ -450,7 +450,7 @@ pub enum ApplicationSecretError {
 }
 
 impl fmt::Display for ApplicationSecretError {
-    fn fmt(&self, f: &mut fmt::Formatter) -> Result<(), fmt::Error> {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> Result<(), fmt::Error> {
         match *self {
             ApplicationSecretError::DecoderError((ref path, ref err)) => writeln!(
                 f,
@@ -476,7 +476,7 @@ pub enum ConfigurationError {
 }
 
 impl fmt::Display for ConfigurationError {
-    fn fmt(&self, f: &mut fmt::Formatter) -> Result<(), fmt::Error> {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> Result<(), fmt::Error> {
         match *self {
             ConfigurationError::DirectoryCreationFailed((ref dir, ref err)) => writeln!(
                 f,
@@ -506,7 +506,7 @@ pub enum InputError {
 }
 
 impl fmt::Display for InputError {
-    fn fmt(&self, f: &mut fmt::Formatter) -> Result<(), fmt::Error> {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> Result<(), fmt::Error> {
         match *self {
             InputError::Io((ref file_path, ref io_err)) => writeln!(
                 f,
@@ -528,7 +528,7 @@ pub enum FieldError {
 }
 
 impl fmt::Display for FieldError {
-    fn fmt(&self, f: &mut fmt::Formatter) -> Result<(), fmt::Error> {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> Result<(), fmt::Error> {
         match *self {
             FieldError::PopOnEmpty(ref field) => {
                 writeln!(f, "'{}': Cannot move up on empty field cursor.", field)
@@ -573,7 +573,7 @@ pub enum CLIError {
 }
 
 impl fmt::Display for CLIError {
-    fn fmt(&self, f: &mut fmt::Formatter) -> Result<(), fmt::Error> {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> Result<(), fmt::Error> {
         match *self {
             CLIError::Configuration(ref err) => write!(f, "Configuration -> {}", err),
             CLIError::Input(ref err) => write!(f, "Input -> {}", err),
@@ -630,7 +630,7 @@ impl Default for InvalidOptionsError {
 }
 
 impl fmt::Display for InvalidOptionsError {
-    fn fmt(&self, f: &mut fmt::Formatter) -> Result<(), fmt::Error> {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> Result<(), fmt::Error> {
         for issue in &self.issues {
             issue.fmt(f)?;
         }

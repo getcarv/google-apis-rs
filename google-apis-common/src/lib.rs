@@ -265,7 +265,7 @@ pub enum Error {
 }
 
 impl Display for Error {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         match self {
             Error::Io(err) => err.fmt(f),
             Error::HttpError(err) => err.fmt(f),
@@ -450,7 +450,7 @@ impl<'a> Read for MultiPartReader<'a> {
                         // will be written last
                         self.last_part_boundary = Some(Cursor::new(
                             format!("{}--{}--{}", LINE_ENDING, BOUNDARY, LINE_ENDING).into_bytes(),
-                        ))
+                        ));
                     }
                     // We are depleted - this can trigger the next part to come in
                     self.current_part = None;
@@ -494,7 +494,7 @@ impl ::std::ops::DerefMut for XUploadContentType {
     }
 }
 impl Display for XUploadContentType {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         fmt::Display::fmt(&**self, f)
     }
 }
@@ -506,7 +506,7 @@ pub struct Chunk {
 }
 
 impl fmt::Display for Chunk {
-    fn fmt(&self, fmt: &mut fmt::Formatter) -> fmt::Result {
+    fn fmt(&self, fmt: &mut fmt::Formatter<'_>) -> fmt::Result {
         (write!(fmt, "{}-{}", self.first, self.last)).ok();
         Ok(())
     }
@@ -575,7 +575,7 @@ impl RangeResponseHeader {
 }
 
 /// A utility type to perform a resumable upload from start to end.
-pub struct ResumableUploadHelper<'a, A: 'a, S>
+pub struct ResumableUploadHelper<'a, A, S>
 where
     S: tower_service::Service<Uri> + Clone + Send + Sync + 'static,
     S::Response:
@@ -825,14 +825,14 @@ mod test_api {
         assert_eq!(
             <Chunk as FromStr>::from_str("2-42"),
             Ok(Chunk { first: 2, last: 42 })
-        )
+        );
     }
 
     #[test]
     fn dyn_delegate_is_send() {
         fn with_send(_x: impl Send) {}
 
-        let mut dd = DefaultDelegate::default();
+        let mut dd = DefaultDelegate;
         let dlg: &mut dyn Delegate = &mut dd;
         with_send(dlg);
     }

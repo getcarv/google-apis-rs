@@ -1,5 +1,3 @@
-extern crate pulldown_cmark;
-extern crate pulldown_cmark_to_cmark;
 
 use pulldown_cmark::{CowStr, Parser, Tag};
 use pulldown_cmark_to_cmark::cmark;
@@ -42,10 +40,10 @@ fn main() {
 
     cmark(
         Parser::new_ext(&md, pulldown_cmark::Options::all()).map(|e| {
-            use pulldown_cmark::Event::*;
+            use pulldown_cmark::Event::{End, Start};
             match e {
                 Start(ref tag) => {
-                    use pulldown_cmark::Tag::*;
+                    use pulldown_cmark::Tag::{CodeBlock, Link};
                     match tag {
                         CodeBlock(pulldown_cmark::CodeBlockKind::Indented) => Start(CodeBlock(
                             pulldown_cmark::CodeBlockKind::Fenced("text".into()),

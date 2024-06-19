@@ -15,7 +15,7 @@ impl<'a> Params<'a> {
     }
 
     pub fn push<I: Into<Cow<'a, str>>>(&mut self, param: &'a str, value: I) {
-        self.params.push((param, value.into()))
+        self.params.push((param, value.into()));
     }
 
     pub fn extend<I: Iterator<Item = (&'a String, IC)>, IC: Into<Cow<'a, str>>>(
@@ -23,7 +23,7 @@ impl<'a> Params<'a> {
         params: I,
     ) {
         self.params
-            .extend(params.map(|(k, v)| (k.as_str(), v.into())))
+            .extend(params.map(|(k, v)| (k.as_str(), v.into())));
     }
 
     pub fn get(&self, param_name: &str) -> Option<&str> {
@@ -42,7 +42,7 @@ impl<'a> Params<'a> {
     ) -> String {
         const DEFAULT_ENCODE_SET: &AsciiSet = &CONTROLS.add(b' ').add(b'"').add(b'#').add(b'<').add(b'>').add(b'`').add(b'?').add(b'{').add(b'}');
         if url_encode {
-            let mut replace_with: Cow<str> = self.get(param).unwrap_or_default().into();
+            let mut replace_with: Cow<'_, str> = self.get(param).unwrap_or_default().into();
             if from.as_bytes()[1] == b'+' {
                 replace_with = percent_encode(replace_with.as_bytes(), DEFAULT_ENCODE_SET)
                     .to_string()
@@ -59,7 +59,7 @@ impl<'a> Params<'a> {
     }
 
     pub fn remove_params(&mut self, to_remove: &[&str]) {
-        self.params.retain(|(n, _)| !to_remove.contains(n))
+        self.params.retain(|(n, _)| !to_remove.contains(n));
     }
 
     pub fn inner_mut(&mut self) -> &mut Vec<(&'a str, Cow<'a, str>)> {

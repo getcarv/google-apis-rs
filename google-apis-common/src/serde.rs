@@ -169,7 +169,7 @@ pub mod standard_base64 {
         where
             D: Deserializer<'de>,
         {
-            let s: Cow<str> = Deserialize::deserialize(deserializer)?;
+            let s: Cow<'_, str> = Deserialize::deserialize(deserializer)?;
             match base64::prelude::BASE64_STANDARD.decode(s.as_ref()) {
                 Ok(decoded) => Ok(decoded),
                 Err(first_err) => match base64::prelude::BASE64_URL_SAFE.decode(s.as_ref()) {
@@ -207,7 +207,7 @@ pub mod urlsafe_base64 {
         where
             D: Deserializer<'de>,
         {
-            let s: Cow<str> = Deserialize::deserialize(deserializer)?;
+            let s: Cow<'_, str> = Deserialize::deserialize(deserializer)?;
             match base64::prelude::BASE64_URL_SAFE.decode(s.as_ref()) {
                 Ok(decoded) => Ok(decoded),
                 Err(first_err) => match base64::prelude::BASE64_STANDARD.decode(s.as_ref()) {
@@ -226,7 +226,6 @@ pub fn datetime_to_string(datetime: &chrono::DateTime<chrono::offset::Utc>) -> S
 #[cfg(test)]
 mod test {
     use super::{duration, standard_base64, urlsafe_base64};
-    use base64::Engine as _;
     use serde::{Deserialize, Serialize};
     use serde_with::{serde_as, DisplayFromStr};
 
@@ -267,7 +266,7 @@ mod test {
             ("129s", 129_000_000_000),
             ("0.123456789s", 123_456_789),
         ];
-        for (repr, nanos) in durations.into_iter() {
+        for (repr, nanos) in durations {
             let wrapper: DurationWrapper =
                 serde_json::from_str(&format!("{{\"duration\": \"{}\"}}", repr)).unwrap();
             assert_eq!(
@@ -283,7 +282,7 @@ mod test {
     #[test]
     fn test_duration_de_failure_cases() {
         let durations = ["1.-3s", "1.1111111111s", "1.2"];
-        for repr in durations.into_iter() {
+        for repr in durations {
             assert!(
                 serde_json::from_str::<DurationWrapper>(&format!("{{\"duration\": \"{}\"}}", repr))
                     .is_err(),
@@ -303,7 +302,7 @@ mod test {
             123_456_789,
         ];
 
-        for nanos in durations.into_iter() {
+        for nanos in durations {
             let wrapper = DurationWrapper {
                 duration: Some(chrono::Duration::nanoseconds(nanos)),
             };
@@ -351,14 +350,14 @@ mod test {
     #[test]
     fn urlsafe_base64_de_reader_success_cases() {
         let wrapper: Base64URLSafeWrapper =
-            serde_json::from_reader(r#"{"bytes": "aGVsbG8gd29ybGQ="}"#.as_bytes()).unwrap();
+            serde_json::from_reader(&br#"{"bytes": "aGVsbG8gd29ybGQ="}"#[..]).unwrap();
         assert_eq!(Some(b"hello world".as_slice()), wrapper.bytes.as_deref());
     }
 
     #[test]
     fn urlsafe_base64_de_standard_success_cases() {
         let wrapper: Base64URLSafeWrapper =  // Expect URL-safe base64 accepts standard encoding
-            serde_json::from_reader(r#"{"bytes": "REE/P0V+Nz4oIWtH"}"#.as_bytes()).unwrap();
+            serde_json::from_reader(&br#"{"bytes": "REE/P0V+Nz4oIWtH"}"#[..]).unwrap();  
         assert_eq!(Some(b"DA??E~7>(!kG".as_slice()), wrapper.bytes.as_deref());
     }
 
@@ -373,7 +372,7 @@ mod test {
     #[test]
     fn standard_base64_de_urlsafe_success_cases() {
         let wrapper: Base64URLSafeWrapper =  // Expect standard base64 accepts url-safe encoding
-            serde_json::from_reader(r#"{"bytes": "REE_P0V-Nz4oIWtH"}"#.as_bytes()).unwrap();
+            serde_json::from_reader(&br#"{"bytes": "REE_P0V-Nz4oIWtH"}"#[..]).unwrap();
         assert_eq!(Some(b"DA??E~7>(!kG".as_slice()), wrapper.bytes.as_deref());
     }
 
